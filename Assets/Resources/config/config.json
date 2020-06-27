@@ -1,0 +1,34 @@
+{
+	"lang":{
+		"defaultValue":"es",
+		"list":["en","es"]
+	},	
+	"difficulty":{
+			"defaultValue":"easy",
+			"list":[
+				{
+					"identifier": "easy",
+					"label":"btn_easy",
+					"multiplier":1
+				},
+				{
+					"identifier":"normal",
+					"label":"btn_normal",
+					"multiplier":1
+				},
+				{
+					"identifier":"hard",
+					"label":"btn_hard",
+					"multiplier":1
+				}
+			]
+	},
+	"sound":{
+	  "music":"music/BGMusic",
+	  "defaultMusicVolume": 0,
+	  "defaultFxVolume":0,
+	  "minVolumeValue":-80,
+	  "maxVolumeValue":0
+	}
+  
+}
