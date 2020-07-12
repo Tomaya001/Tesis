@@ -9,7 +9,7 @@ namespace com.baiba.player
         public GameObject ObjectToPickUp;
         public GameObject PickedObject;
         public Transform hand;
-
+        public GameObject ObjectToTake;
         void Agarrar()
         {
             if (ObjectToPickUp != null && ObjectToPickUp.GetComponent<PickableObjects>().isPickable)
@@ -24,17 +24,26 @@ namespace com.baiba.player
         }
 
         void Soltar()
-        {   
+        {
             PickedObject.GetComponent<PickableObjects>().isPickable = true;
             PickedObject.transform.SetParent(null);
             //PickedObject.transform.position = hand.position;
             PickedObject.GetComponent<Rigidbody>().useGravity = true;
             PickedObject.GetComponent<Rigidbody>().isKinematic = false;
-            PickedObject = null;            
+            PickedObject = null;
         }
-
+        void Tomar()
+        {
+            Instantiate(ObjectToTake);
+        }
+        
         public void AgarraroSoltar()
         {
+            if(ObjectToTake != null)
+            {
+                Tomar();
+            }
+            
             if (PickedObject == null)
             {
                 Agarrar();
