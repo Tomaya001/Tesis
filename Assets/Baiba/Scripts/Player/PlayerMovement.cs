@@ -7,8 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float rotationSpeed;
     Transform t;
-    public Joystick joystickDirection;
-    public Joystick joystickRotation;
+    public Joystick joystick;
 
     private void Start()
     {
@@ -17,8 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        t.Translate(Vector3.forward * joystickDirection.Vertical * speed * Time.deltaTime);
-        //t.Translate(Vector3.right * joystickDirection.Horizontal * speed * Time.deltaTime);
-        t.Rotate(Vector3.up * joystickRotation.Horizontal * rotationSpeed * Time.deltaTime);
+        Vector3 algo = new Vector3(joystick.Horizontal, 0, joystick.Vertical) + t.position;
+        t.LookAt(algo);
+        if (joystick.Vertical != 0 || joystick.Horizontal !=0)
+        {
+            t.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
     }
 }
