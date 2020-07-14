@@ -16,8 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        t.Translate(Vector3.forward * (joystick.Vertical + joystick.Horizontal) * speed * Time.deltaTime);
-        //t.Translate(Vector3.right * joystick.Horizontal * speed * Time.deltaTime);
-        t.Rotate(Vector3.up * joystick.Horizontal * rotationSpeed * Time.deltaTime);
+        Vector3 algo = new Vector3(joystick.Horizontal, 0, joystick.Vertical) + t.position;
+        t.LookAt(algo);
+        if (joystick.Vertical != 0 || joystick.Horizontal !=0)
+        {
+            t.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
     }
 }
