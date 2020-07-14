@@ -18,7 +18,7 @@ public class ComponentBasedTime : MonoBehaviour
 
     private void Awake()
     {
-        trash = gameObject.GetComponent<PickableObjects>().isTrash;
+        //trash = gameObject.GetComponent<PickableObjects>().isTrash;
         ready = gameObject.GetComponent<PickableObjects>().isPickable;
         col = gameObject.GetComponent<MeshCollider>();
     }
