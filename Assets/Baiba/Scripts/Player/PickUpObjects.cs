@@ -23,25 +23,20 @@ namespace com.baiba.player
             }
         }
 
-        void Soltar()
+        /*void Soltar()
         {   
             PickedObject.GetComponent<PickableObjects>().isPickable = true;
             PickedObject.transform.SetParent(null);
-            //PickedObject.transform.position = hand.position;
             PickedObject.GetComponent<Rigidbody>().useGravity = true;
             PickedObject.GetComponent<Rigidbody>().isKinematic = false;
             PickedObject = null;            
-        }
+        }*/
 
-        public void AgarraroSoltar()
+        public void AgarrarBandeja()
         {
-            if (PickedObject == null)
+            if (ObjectToPickUp.CompareTag("Bandeja"))
             {
                 Agarrar();
-            }
-            else
-            {
-                Soltar();
             }
         }
     }
