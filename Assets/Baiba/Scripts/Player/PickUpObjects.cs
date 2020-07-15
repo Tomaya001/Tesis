@@ -16,7 +16,7 @@ namespace com.baiba.player
             {
                 PickedObject = ObjectToPickUp;
                 PickedObject.GetComponent<PickableObjects>().isPickable = false;
-                PickedObject.transform.SetParent(hand);
+                PickedObject.transform.SetParent(hand.transform.parent);
                 PickedObject.transform.position = hand.position;
                 PickedObject.GetComponent<Rigidbody>().useGravity = false;
                 PickedObject.GetComponent<Rigidbody>().isKinematic = true;

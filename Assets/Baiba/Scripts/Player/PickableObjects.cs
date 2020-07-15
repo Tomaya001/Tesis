@@ -12,7 +12,7 @@ namespace com.baiba.player
         {
             if (other.CompareTag("Hand"))
             {                
-                other.GetComponentInParent<PickUpObjects>().ObjectToPickUp = this.gameObject;                
+                other.GetComponentInParent<PickUpObjects>().ObjectToPickUp = this.gameObject;
             }
         }
 
