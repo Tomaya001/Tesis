@@ -6,6 +6,8 @@ TagManager:
   tags:
   - TEST
   - Hand
+  - Bandeja
+  - Ingrediente
   layers:
   - Default
   - TransparentFX

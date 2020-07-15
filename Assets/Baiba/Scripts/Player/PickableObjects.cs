@@ -11,7 +11,7 @@ namespace com.baiba.player
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Hand"))
-            {
+            {                
                 other.GetComponentInParent<PickUpObjects>().ObjectToPickUp = this.gameObject;
             }
         }

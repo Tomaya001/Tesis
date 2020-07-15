@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7650637435515228639}
   - component: {fileID: 9206005725675231566}
   - component: {fileID: 1803305363119219834}
-  - component: {fileID: 2047527280994650134}
   m_Layer: 5
   m_Name: PrinciplaButton
   m_TagString: Untagged
@@ -119,18 +118,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2047527280994650134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454443308805037561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4ced2b366c0aa94f90da6316fc220f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &829714431732058934
 GameObject:
   m_ObjectHideFlags: 0
