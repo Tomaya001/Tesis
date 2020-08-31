@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using com.baiba.core;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,9 +7,18 @@ namespace com.baiba.player
 {
     public class PickUpObjects : MonoBehaviour
     {
+        [Header("Conteiner")]
+        public ContType type;        
+
         public GameObject ObjectToPickUp;
         public GameObject PickedObject;
         public Transform hand;
+
+        public enum ContType
+        {
+            Player,
+            Bandeja
+        }
 
         void Agarrar()
         {
@@ -34,7 +44,7 @@ namespace com.baiba.player
 
         public void AgarrarBandeja()
         {
-            if (ObjectToPickUp.CompareTag("Bandeja"))
+            if (ObjectToPickUp.CompareTag(Const.TAG.BANDEJA))
             {
                 Agarrar();
             }

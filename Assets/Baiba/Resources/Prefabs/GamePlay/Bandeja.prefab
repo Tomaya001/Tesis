@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 6040938975547991804}
   - component: {fileID: 6060230998721638769}
   - component: {fileID: 6899308884420129817}
-  - component: {fileID: 7087031804534304810}
+  - component: {fileID: 4562068818321436861}
   m_Layer: 0
   m_Name: Bandeja
   m_TagString: Bandeja
@@ -373,7 +373,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f6a752fb70d9e40904f29c15aa4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Interaccion: 0
   isPickable: 1
+  isTrash: 0
 --- !u!114 &6899308884420129817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +392,7 @@ MonoBehaviour:
   PickedObjectList: []
   points: []
   poss: 0
---- !u!114 &7087031804534304810
+--- !u!114 &4562068818321436861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,7 +401,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5271921493704869150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6135d6a5824a743bd01642c78dc583, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c25869f890791243ab0dfad0d62d4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingList: []
+  ingredientList: []

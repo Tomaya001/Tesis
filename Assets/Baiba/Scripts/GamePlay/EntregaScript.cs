@@ -1,22 +1,27 @@
-﻿using System.Collections;
+﻿using com.baiba.core;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EntregaScript : MonoBehaviour
 {
-    public List<ingListScript> pedidosList;
+    public List<IngredientList> pedidosList;
     public Text txtPedido;
 
-    ingListScript orden;
+    IngredientList orden;
 
     private void Start()
     {
         txtPedido.text = null;
         orden = pedidosList[Random.Range(0, pedidosList.Count)];
-        for (int i = 0; i < orden.ingList.Count; i++)
+        for (int i = 0; i < orden.ingredientList.Count; i++)
         {
-            txtPedido.text += orden.ingList[i];
+            for (int j = 0; j < orden.ingredientList.Count; j++)
+            {
+                txtPedido.text += orden.ingredientList[j].id + '\n';
+            }
+            break;
         }
     }
 
@@ -24,18 +29,18 @@ public class EntregaScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bandeja"))
         {
-            Compararorden(other.gameObject.GetComponent<ingListScript>());
+            CompararOrden(other.gameObject.GetComponent<IngredientList>());
             other.gameObject.GetComponent<PickUpBandeja>().Limpiar();
         }
     }
 
-    public void Compararorden(ingListScript list)
+    public void CompararOrden(IngredientList list)
     {
-        for (int i = 0; i < orden.ingList.Count; i++)
+        for (int i = 0; i < orden.ingredientList.Count; i++)
         {
-            for (int j = 0; j < list.ingList.Count; j++)
+            for (int j = 0; j < list.ingredientList.Count; j++)
             {
-                if (orden.ingList[i].Equals(list.ingList[j]))
+                if (orden.ingredientList[i].Equals(list.ingredientList[j]))
                     j++;
                 else
                     Debug.Log("Oreden Equivocada, Perdiste Loseeer");

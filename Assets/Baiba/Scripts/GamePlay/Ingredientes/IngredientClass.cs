@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace com.baiba.player
+
+public class IngredientClass : MonoBehaviour
 {
-    public class GrapScript
-    {
-        
-    }
+    public string id;
 }
+
 

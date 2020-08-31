@@ -447,12 +447,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 128654693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6135d6a5824a743bd01642c78dc583, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c25869f890791243ab0dfad0d62d4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingList:
-  - ing1
-  - ing2
+  ingredientList:
+  - {fileID: 1405794963}
+  - {fileID: 2071055878}
+  - {fileID: 1900948699}
 --- !u!4 &128654695
 Transform:
   m_ObjectHideFlags: 0
@@ -889,7 +890,8 @@ PrefabInstance:
       propertyPath: points.Array.data[5]
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7087031804534304810, guid: 8a13f6989ec42424abdfe4d5053ad9b1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8a13f6989ec42424abdfe4d5053ad9b1, type: 3}
 --- !u!4 &426401813 stripped
 Transform:
@@ -935,13 +937,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 529775357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6135d6a5824a743bd01642c78dc583, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c25869f890791243ab0dfad0d62d4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingList:
-  - ing3
-  - ing1
-  - ing2
+  ingredientList:
+  - {fileID: 2071055878}
+  - {fileID: 1405794963}
+  - {fileID: 1900948699}
 --- !u!4 &529775359
 Transform:
   m_ObjectHideFlags: 0
@@ -982,13 +984,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 546605990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6135d6a5824a743bd01642c78dc583, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c25869f890791243ab0dfad0d62d4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingList:
-  - ing1
-  - ing2
-  - ing3
+  ingredientList:
+  - {fileID: 2071055878}
+  - {fileID: 1900948699}
 --- !u!4 &546605992
 Transform:
   m_ObjectHideFlags: 0
@@ -1971,8 +1972,8 @@ GameObject:
   - component: {fileID: 1405794958}
   - component: {fileID: 1405794957}
   - component: {fileID: 1405794961}
-  - component: {fileID: 1405794962}
   - component: {fileID: 1405794963}
+  - component: {fileID: 1405794962}
   m_Layer: 0
   m_Name: Ing1
   m_TagString: Ingrediente
@@ -2079,9 +2080,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1405794956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c679d8cddd967c94b93fa8f5a6afb8ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 57f6a752fb70d9e40904f29c15aa4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Interaccion: 1
   isPickable: 1
   isTrash: 0
 --- !u!114 &1405794963
@@ -2093,10 +2095,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1405794956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b70bc3b43d5b14ca09d9f592c086b1, type: 3}
+  m_Script: {fileID: 11500000, guid: d26000ad00fe1e94a9ac63d9f926ce96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: ing1
+  id: Azul
 --- !u!1 &1514110585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,8 +2381,8 @@ GameObject:
   - component: {fileID: 1900948696}
   - component: {fileID: 1900948695}
   - component: {fileID: 1900948694}
-  - component: {fileID: 1900948693}
   - component: {fileID: 1900948699}
+  - component: {fileID: 1900948693}
   m_Layer: 0
   m_Name: Ing3
   m_TagString: Ingrediente
@@ -2397,9 +2399,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1900948692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c679d8cddd967c94b93fa8f5a6afb8ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 57f6a752fb70d9e40904f29c15aa4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Interaccion: 1
   isPickable: 1
   isTrash: 0
 --- !u!54 &1900948694
@@ -2501,10 +2504,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1900948692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b70bc3b43d5b14ca09d9f592c086b1, type: 3}
+  m_Script: {fileID: 11500000, guid: d26000ad00fe1e94a9ac63d9f926ce96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: ing3
+  id: Rojo
 --- !u!1 &1929347836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,8 +2635,8 @@ GameObject:
   - component: {fileID: 2071055875}
   - component: {fileID: 2071055874}
   - component: {fileID: 2071055873}
-  - component: {fileID: 2071055872}
   - component: {fileID: 2071055878}
+  - component: {fileID: 2071055872}
   m_Layer: 0
   m_Name: Ing2
   m_TagString: Ingrediente
@@ -2650,9 +2653,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2071055871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c679d8cddd967c94b93fa8f5a6afb8ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 57f6a752fb70d9e40904f29c15aa4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Interaccion: 1
   isPickable: 1
   isTrash: 0
 --- !u!54 &2071055873
@@ -2754,10 +2758,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2071055871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80b70bc3b43d5b14ca09d9f592c086b1, type: 3}
+  m_Script: {fileID: 11500000, guid: d26000ad00fe1e94a9ac63d9f926ce96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: ing2
+  id: Morado
 --- !u!1001 &2107639946
 PrefabInstance:
   m_ObjectHideFlags: 0

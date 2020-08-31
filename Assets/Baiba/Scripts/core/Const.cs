@@ -20,6 +20,8 @@ namespace com.baiba.core
         public static class TAG
         {
             public static string PLAYER = "Player";
+            public static string HAND = "Hand";
+            public static string BANDEJA = "Bandeja";
         }
 
         public static class STORAGE
